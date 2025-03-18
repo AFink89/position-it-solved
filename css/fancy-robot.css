@@ -1,38 +1,173 @@
+* {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+}
+
 .robot-container {
+  display: flexbox;
+  flex-direction: column;
+  gap: 30px;
+  margin: 30px auto;
+  padding: 50px;
+  top: 100px;
+  position: relative;
 }
 
 .robot-face-shape {
+  height: 500px;
+  width: 500px;
+  background-image: url(https://fastly.picsum.photos/id/56/2880/1920.jpg?hmac=BIplhYgNZ9bsjPXYhD0xx6M1yPgmg4HtthKkCeJp6Fk);
+  background-size: 100%;
+  background-position: center;
+  margin: 50px auto;
+  border-radius: 20px;
+}
+
+.robot-eyes {
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto;
+  padding: 50px;
+  gap: 60px;
 }
 
 .robot-eye-left {
+  height: 170px;
+  width: 170px;
+  background-color: rgb(0, 252, 240);
+  border: 5px dashed black;
+  border-radius: 50%;
 }
 
 .robot-eye-right {
+  height: 100px;
+  width: 250px;
+  border: 3px solid rgb(0, 0, 0);
+  background-image: radial-gradient(circle, rgba(251, 145, 63, 0.8543066884957108) 0%, rgba(101, 70, 252, 1) 100%);
+}
+
+.robot-ears {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .robot-ear-left {
+  width: 100px;
+  height: 150px;
+  background-color: #bdbaba;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
 .robot-ear-right {
+  width: 0;
+  height: 0;
+  border-top: 80px solid transparent;
+  border-left: 150px solid red;
+  border-bottom: 80px solid transparent;
+  margin-right: -50px;
 }
 
+
+
 .robot-nose {
+  height: 100px;
+  width: 100px;
+  border: 7px solid;
+  border-radius: 50%;
+  margin: -50px auto;
+  background-image: linear-gradient(rgba(251, 237, 63, 1) 0%, rgba(70, 252, 251, 1) 100%);
 }
 
 .robot-teeth {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100px;
+  border: 5px solid rgb(10, 9, 0);
+  background-color: whitesmoke;
+  margin: 80px auto;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
-.robot-tooth {
+.top-teeth,
+.bottom-teeth {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
 }
+
+.robot-tooth-right,
+.robot-tooth-left {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.robot-tooth-right {
+  border-width: 0 20px 40px 20px;
+  border-color: transparent transparent rgb(252, 223, 0) transparent;
+}
+
+.robot-tooth-left {
+  border-width: 40px 20px 0 20px;
+  border-color: rgb(248, 109, 3) transparent transparent transparent;
+}
+
 
 .robot-hair-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 12px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .robot-hair-one {
+  width: 80px;
+  height: 80px;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 80px solid rgb(255, 198, 27, .884);
+  position: relative;
+}
+
+.robot-hair-one:after {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 80px solid rgba(255, 198, 27, 0.884);
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: -40px;
 }
 
 .robot-hair-two {
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgb(236, 232, 239);
+  background-color: blueviolet;
 }
 
 .robot-hair-three {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 80px solid rgb(234, 226, 8);
 }
